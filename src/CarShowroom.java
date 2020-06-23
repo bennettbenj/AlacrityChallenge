@@ -54,8 +54,19 @@ public class CarShowroom {
 
     void getPriciestCar(){
 
+        Car priciestCarCurrently = null;
+        Car currentCar;
 
+        for (Map.Entry<String, Car> car: currentCars.entrySet()
+        ) {
+            currentCar = car.getValue();
 
+            if (priciestCarCurrently == null ||  currentCar.getPrice() > priciestCarCurrently.getPrice()){
+                priciestCarCurrently = currentCar;
+            }
+        }
+
+        priciestCar = priciestCarCurrently;
 
     }
 
