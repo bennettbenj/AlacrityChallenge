@@ -10,6 +10,8 @@ public class CarShowroom {
     public CarShowroom() {
         initialiseShowroom();
         calculateAveragePrice();
+        getOldestCar();
+        getPriciestCar();
     }
 
     //First populate hashmap with initial cars in the showroom
@@ -29,6 +31,14 @@ public class CarShowroom {
         }
 
         averageCarPrice =  totalPrice / currentCars.size();
+    }
+
+    void getOldestCar(){
+
+    }
+
+    void getPriciestCar(){
+
     }
 
     public static void main(String[] args) {
