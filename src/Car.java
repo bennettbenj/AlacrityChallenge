@@ -1,8 +1,8 @@
 public class Car {
 
-    String make;
-    int price;
-    int year;
+    private String make;
+    private int price;
+    private int year;
 
     public Car(String make, int price, int year) {
         this.make = make;
