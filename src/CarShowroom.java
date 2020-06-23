@@ -9,7 +9,7 @@ public class CarShowroom {
     private Car oldestCar;
     private Car priciestCar;
 
-
+    //Inititalise the showroom and run calculations
     public CarShowroom() {
         initialiseShowroom();
         calculateAveragePrice();
@@ -34,6 +34,8 @@ public class CarShowroom {
         }
 
         averageCarPrice =  totalPrice / currentCars.size();
+
+        System.out.println("Average car price is: " + averageCarPrice +"\n");
     }
 
     void setOldestCar(){
@@ -51,6 +53,8 @@ public class CarShowroom {
         }
 
         oldestCar = oldestCarCurrently;
+
+        System.out.println("Oldest car is: " + oldestCar.getMake() +"\n");
     }
 
     void getPriciestCar(){
@@ -68,6 +72,8 @@ public class CarShowroom {
         }
 
         priciestCar = priciestCarCurrently;
+
+        System.out.println("Pricest car is: " + priciestCar.getMake() +"\n");
 
     }
 
