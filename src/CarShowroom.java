@@ -5,12 +5,14 @@ public class CarShowroom {
 
     private Map<String, Car> currentCars = new HashMap<>();
     private int averageCarPrice;
+    private Car oldestCar;
+    private Car priciestCar;
 
 
     public CarShowroom() {
         initialiseShowroom();
         calculateAveragePrice();
-        getOldestCar();
+        setOldestCar();
         getPriciestCar();
     }
 
@@ -33,11 +35,27 @@ public class CarShowroom {
         averageCarPrice =  totalPrice / currentCars.size();
     }
 
-    void getOldestCar(){
+    void setOldestCar(){
 
+        Car oldestCarCurrently = null;
+        Car currentCar;
+
+        for (Map.Entry<String, Car> car: currentCars.entrySet()
+        ) {
+            currentCar = car.getValue();
+
+            if (oldestCarCurrently == null ||  currentCar.getYear() < oldestCarCurrently.getYear()){
+                oldestCarCurrently = currentCar;
+            }
+        }
+
+        oldestCar = oldestCarCurrently;
     }
 
     void getPriciestCar(){
+
+
+
 
     }
 
