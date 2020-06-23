@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class CarShowroom {
 
@@ -72,7 +73,22 @@ public class CarShowroom {
 
     public static void main(String[] args) {
         CarShowroom showroom = new CarShowroom();
+        int input;
+        Scanner in = new Scanner(System.in);
 
-        showroom.currentCars.forEach((key, value) -> System.out.println(key + ":" + value));
+        System.out.println("Welcome to the car showroom, to list all cars in the showroom press 1:");
+
+        while(true){
+
+            input = Integer.parseInt(in.nextLine());
+
+            if (input == 1){
+                showroom.currentCars.entrySet().forEach(entry->{
+                    System.out.println("Model: "+ entry.getKey() + "\nPrice: " + entry.getValue().getPrice() + "\nYear: " + entry.getValue().getYear() + "\n");
+                });
+            }
+        }
+
+
     }
 }
