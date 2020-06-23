@@ -76,7 +76,8 @@ public class CarShowroom {
         int input;
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Welcome to the car showroom, to list all cars in the showroom press 1:");
+        System.out.println("Welcome to the car showroom, to list all cars in the showroom press 1:\n" +
+                "To get the details for an individual car, type its model name");
 
         while(true){
 
@@ -89,6 +90,9 @@ public class CarShowroom {
             }
         }
 
+    }
+
+    void addnewCar(String model, int price, int year){
 
     }
 }
